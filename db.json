@@ -1,0 +1,124 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "fullName": "Nguyễn Văn A",
+      "email": "a@gmail.com",
+      "password": "123456",
+      "address": "Hà Nội",
+      "phone": "0900000001",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "2",
+      "fullName": "Trần Thị B",
+      "email": "b@gmail.com",
+      "password": "123456",
+      "address": "TP.HCM",
+      "phone": "0900000002",
+      "status": "ACTIVE"
+    }
+  ],
+  "roles": [
+    { "id": "1", "name": "ADMIN" },
+    { "id": "2", "name": "USER" }
+  ],
+  "user_role": [
+    { "id": "1", "user_id": "1", "role_id": "1" },
+    { "id": "2", "user_id": "1", "role_id": "2" },
+    { "id": "3", "user_id": "2", "role_id": "2" }
+  ],
+  "category": [
+    { "id": "1", "name": "Áo", "status": "ACTIVE" },
+    { "id": "2", "name": "Quần", "status": "ACTIVE" }
+  ],
+  "product": [
+    {
+      "id": "1",
+      "name": "Áo thun basic",
+      "price": 120000,
+      "stock": 50,
+      "category_id": "1",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "2",
+      "name": "Quần jeans xanh",
+      "price": 350000,
+      "stock": 30,
+      "category_id": "2",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "3",
+      "name": "Áo sơ mi trắng",
+      "price": 250000,
+      "stock": 20,
+      "category_id": "1",
+      "status": "INACTIVE"
+    }
+  ],
+  "shopping_cart": [
+    { "id": "1", "user_id": "2", "product_id": "2", "quantity": 2 },
+    { "id": "2", "user_id": "2", "product_id": "1", "quantity": 1 },
+    { "id": "3", "user_id": "1", "product_id": "1", "quantity": 2 }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "orderDate": "2026-01-20",
+      "receiveDate": "2026-01-22",
+      "user_id": "2",
+      "status": "CANCEL",
+      "shipping": {
+        "fullName": "Trần Thị B",
+        "phone": "0900000002",
+        "address": "TP.HCM"
+      },
+      "total": 590000
+    },
+    {
+      "id": "2",
+      "orderDate": "2026-01-21",
+      "receiveDate": "2026-01-24",
+      "user_id": "1",
+      "status": "PENDING",
+      "shipping": {
+        "fullName": "Nguyễn Văn A",
+        "phone": "0900000001",
+        "address": "Hà Nội"
+      },
+      "total": 590000
+    }
+  ],
+  "order_detail": [
+    {
+      "id": "1",
+      "order_id": "1",
+      "product_id": "1",
+      "quantity": 2,
+      "unit_price": 120000
+    },
+    {
+      "id": "2",
+      "order_id": "1",
+      "product_id": "2",
+      "quantity": 1,
+      "unit_price": 350000
+    },
+    {
+      "id": "3",
+      "order_id": "2",
+      "product_id": "2",
+      "quantity": 1,
+      "unit_price": 350000
+    },
+    {
+      "id": "4",
+      "order_id": "2",
+      "product_id": "1",
+      "quantity": 2,
+      "unit_price": 120000
+    }
+  ]
+}
